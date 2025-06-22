@@ -21,8 +21,9 @@ const WeatherCard = () => {
     },[])
     useEffect(()=>{
         async function changeTemp(){
-            const result=await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${location.latitude}&lon=${location.longitude}&appid=bcb0f9ec5b271cb4c8edb97b19b87f6a&units=metric
+            const result=await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${location.latitude}&lon=${location.longitude}&appid=${process.env.NEXT_PUBLIC_OPEN_WEATHER_API_KEY}&units=metric
 `)      
+            console.log(result);
             setTemp(Math.floor(result.data.main.temp));
         }
         changeTemp();
