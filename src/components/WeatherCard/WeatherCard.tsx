@@ -8,6 +8,7 @@ const WeatherCard = () => {
         longitude: 48.8584
     });
     const [temp, setTemp] = useState(25);
+    //getting geolocation of user
     useEffect(() => {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition((position) => {
@@ -19,6 +20,7 @@ const WeatherCard = () => {
 
         }
     }, [])
+    //calling open weather api for getting weather info for user
     useEffect(() => {
         async function changeTemp() {
             try {
