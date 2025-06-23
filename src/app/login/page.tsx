@@ -1,8 +1,13 @@
-import React from 'react'
+'use client'
+import React, { useEffect } from 'react'
 import Image from 'next/image'
 import login_background from '../../../public/Login_background.png'
 import LoginForm from '@/components/LoginForm/LoginFrom'
 function Login() {
+  useEffect(()=>{
+    if(localStorage.getItem('user')!=null)
+      window.location.href = '/';
+  },[])
   return (
     <div className='w-[100vw] h-[100vh] flex flex-col lg:flex-row'>
         <div className='w-[100vw] lg:w-[50vw] lg:h-[100vh] h-[35vh] sm:h-[40vh]'>
