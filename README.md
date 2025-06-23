@@ -9,7 +9,7 @@ This is a frontend project for a intern application. It allows user to access we
 3.  **Install Node modules:** `npm install`
 4.  **Set up environment variables:**
     *   Create a `.env` file in the root directory.
-    *   Add your weather API key: `NEXT_PUBLIC_OPEN_WEATHER_API_KEY=<your_api_key>`
+    *   Add your weather API key: `OPEN_WEATHER_API_KEY=<your_api_key>`
 5.  **Run the development server:** `npm run dev`
 
 
