@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import login_background from '../../../public/Login_background.png'
-import Login_Form from '@/components/login_form/login_form'
+import LoginForm from '@/components/LoginForm/LoginFrom'
 function Login() {
   return (
     <div className='w-[100vw] h-[100vh] flex flex-col lg:flex-row'>
@@ -10,7 +10,7 @@ function Login() {
         </div>
         <div className='w-[100vw] lg:w-[50%] h-[75vh] sm:h-[65vh] lg:h-[100vh] flex justify-center items-center'>
             <div className='w-[90%] h-[95%] sm:h-auto sm:w-[70%] lg:w-[60%]'>
-              <Login_Form/>
+              <LoginForm/>
             </div>
             
         </div>
