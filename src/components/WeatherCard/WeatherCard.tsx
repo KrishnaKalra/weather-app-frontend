@@ -23,10 +23,13 @@ const WeatherCard = () => {
         async function changeTemp() {
             try {
                 const result = await axios.get(
-                    `https://api.openweathermap.org/data/2.5/weather?lat=${location.latitude}&lon=${location.longitude}&appid=${process.env.NEXT_PUBLIC_OPEN_WEATHER_API_KEY}&units=metric`
+                    `/api/weather?lat=${location.latitude}&lon=${location.longitude}`
                 );
                 console.log(result)
-                setTemp(Math.floor(result.data.main.temp));
+                const data = result.data;
+                if (data && data.main?.temp !== undefined) {
+                    setTemp(Math.floor(data.main.temp));
+                }
             } catch (error) {
                 console.error("Failed to fetch temperature:", error);
             }
